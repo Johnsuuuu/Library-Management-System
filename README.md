@@ -1,5 +1,5 @@
 ### Library Management System
-* functionality
+* functionalities
   * add book type
   * edit book type info
   * add book
