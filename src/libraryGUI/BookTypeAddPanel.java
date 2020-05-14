@@ -65,7 +65,7 @@ public class BookTypeAddPanel extends JPanel implements ActionListener {
         containerBox.add(Box.createVerticalStrut(100));
 
         buttonBox = Box.createHorizontalBox();
-        addButton = new JButton("Add");
+        addButton = new JButton("add");
         resetButton = new JButton("reset");
         returnButton = new JButton("return");
         buttonBox.add(addButton);

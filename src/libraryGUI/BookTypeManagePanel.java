@@ -110,7 +110,6 @@ public class BookTypeManagePanel extends JPanel implements ActionListener, ListS
         buttonBox.add(Box.createHorizontalStrut(80));
         buttonBox.add(returnButton);
         containerBox.add(buttonBox);
-        containerBox.add(Box.createVerticalStrut(20));
 
         return containerBox;
 

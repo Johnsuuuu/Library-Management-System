@@ -166,6 +166,34 @@ public class BookTypeManager {
         return result;
     }
 
+    public String[] loadSelectedBookTypeName(int booktypeid){
+        String[] result = new String[1];
+        Connection conn=null;
+        try{
+            conn= LibraryJDBC.getConnection();
+            String sql = "select booktypename from beanbooktype where booktypeid=?";
+            PreparedStatement pst = conn.prepareStatement(sql);
+            pst.setInt(1,booktypeid);
+            ResultSet rs = pst.executeQuery();
+            while(rs.next()){
+               result[0] = rs.getString(1);
+            }
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+        finally{
+            if(conn!=null)
+                try {
+                    conn.close();
+
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+        }
+        return result;
+    }
+
 
 
 
